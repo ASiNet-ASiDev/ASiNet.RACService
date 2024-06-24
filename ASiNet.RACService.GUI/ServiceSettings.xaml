@@ -1,0 +1,69 @@
+﻿<Window x:Class="ASiNet.RACService.GUI.ServiceSettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ASiNet.RACService.GUI"
+        mc:Ignorable="d"
+        Height="400" Width="500"
+        AllowsTransparency="True" Padding="0"
+        ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="#00000000">
+    <Border CornerRadius="5"
+        BorderBrush="#309f57" BorderThickness="2"
+        Background="#212121"
+        Padding="5" 
+        HorizontalAlignment="Stretch" 
+        VerticalAlignment="Stretch">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid >
+                <TextBlock Text="Service Settings" Foreground="#309f57" FontSize="16" Background="Transparent" MouseDown="TextBlock_MouseDown"/>
+                <Button Content="X" Width="30" HorizontalAlignment="Right" Click="Button_Click"/>
+            </Grid>
+            <ScrollViewer Grid.Row="1">
+                <StackPanel Orientation="Vertical">
+                    <Expander Header="Connection" Foreground="#f1f1f1">
+                        <StackPanel Orientation="Vertical">
+                            <Grid Margin="0,3">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="5*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="Port:" Foreground="#f1f1f1" Grid.Column="0"/>
+                                <TextBox x:Name="PortTextB" Grid.Column="1" TextChanged="PortTextB_TextChanged" BorderBrush="Black"/>
+                            </Grid>
+                            <Grid Margin="0,3">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="5*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="Login:" Foreground="#f1f1f1" Grid.Column="0"/>
+                                <TextBox x:Name="LoginTextB" Grid.Column="1" TextChanged="LoginTextB_TextChanged" BorderBrush="Black"/>
+                            </Grid>
+                            <Grid Margin="0,3">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="5*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="Password:" Foreground="#f1f1f1" Grid.Column="0"/>
+                                <TextBox x:Name="PasswordTextB" Grid.Column="1" TextChanged="PasswordTextB_TextChanged" BorderBrush="Black"/>
+                            </Grid>
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="Permissions" Foreground="#f1f1f1">
+                        <StackPanel Orientation="Vertical">
+                            <CheckBox x:Name="ARAKeyboard" Margin="0,3" Content="Remote access to keyboard" Checked="ARAKeyboard_Checked"/>
+                            <CheckBox x:Name="ARADisk" Margin="0,3" Content="Remote disk access" Checked="ARADisk_Checked"/>
+                            <CheckBox x:Name="ARADiskWrite" Margin="0,3" Content="Allow remote write to disk" Checked="ARADiskWrite_Checked"/>
+                            <CheckBox x:Name="ARADatabase" Margin="0,3" Content="Allow remote access to database" Checked="ARADatabase_Checked"/>
+                            <CheckBox x:Name="ARADatabaseWrite" Margin="0,3" Content="Allow remote write to database" Checked="ARADatabaseWrite_Checked"/>
+                        </StackPanel>
+                    </Expander>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Border>
+</Window>
