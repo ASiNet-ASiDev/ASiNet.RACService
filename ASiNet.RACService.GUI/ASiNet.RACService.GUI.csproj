@@ -12,6 +12,8 @@
     <Copyright>MIT</Copyright>
     <AssemblyName>RACService</AssemblyName>
     <ApplicationIcon>rac_ico.ico</ApplicationIcon>
+    <RootNamespace>ASiNet.RACService.GUI</RootNamespace>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

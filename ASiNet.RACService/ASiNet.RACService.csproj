@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
     <Authors>ASiDev</Authors>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Description>Remote Access Core (RAC) Service</Description>
     <Copyright>MIT</Copyright>
     <ApplicationIcon>rac_ico.ico</ApplicationIcon>
+    <AssemblyName>RACService</AssemblyName>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
