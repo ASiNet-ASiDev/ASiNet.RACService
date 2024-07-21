@@ -8,5 +8,21 @@ public static class SerializerInit
         .RegisterType<AuthRequest>()
         .RegisterType<AuthResponse>()
         .RegisterType<KeyboardAccessRequest>()
-        .RegisterType<KeyboardAccessResponse>();
+        .RegisterType<KeyboardAccessResponse>()
+        .RegisterType<PressKeyRequest>()
+        .RegisterType<PressKeyResponce>()
+        .RegisterType<UpKeyRequest>()
+        .RegisterType<UpKeyResponce>()
+        .RegisterType<ClickKeyRequest>()
+        .RegisterType<ClickKeyResponce>()
+        .RegisterType<ClickOneRequest>()
+        .RegisterType<ClickOneResponce>()
+        .RegisterType<ClickTwoRequest>()
+        .RegisterType<ClickTwoResponce>()
+        .RegisterType<ClickThreeRequest>()
+        .RegisterType<ClickThreeResponce>()
+        .RegisterType<LongClickRequest>()
+        .RegisterType<LongClickResponse>()
+        .RegisterType<RepeatClickRequest>()
+        .RegisterType<RepeatClickResponse>();
 }

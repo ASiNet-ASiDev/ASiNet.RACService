@@ -14,6 +14,7 @@ public class RAClient : IDisposable
         _client.Subscribe<AuthRequest>(OnAuthRequest);
 
         _keyboardHandler = new(this, config);
+        _kbHandler = new(this, config);
     }
 
     public bool IsConnected => _client.Connected;
@@ -25,7 +26,8 @@ public class RAClient : IDisposable
     private Config _config;
     private ExtensionTcpClient _client;
 
-    private KeyboardHandler _keyboardHandler;
+    private LegacyKeyboardHandler _keyboardHandler;
+    private KeyboardHandler _kbHandler;
 
     private byte _authAttempthCount;
 

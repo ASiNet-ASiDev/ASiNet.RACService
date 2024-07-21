@@ -28,6 +28,7 @@
 
   <ItemGroup>
     <PackageReference Include="ASiNet.TcpLib" Version="0.0.8" />
+    <PackageReference Include="ASiNet.Win.IO" Version="1.0.0" />
     <PackageReference Include="ASiNet.WinLib" Version="1.0.0" />
     <PackageReference Include="ASiNet.WinLib.Extensions" Version="1.0.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
